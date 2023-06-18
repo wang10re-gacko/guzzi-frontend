@@ -187,17 +187,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@toss/use-query-param@npm:^1.1.7":
-  version: 1.1.7
-  resolution: "@toss/use-query-param@npm:1.1.7"
-  peerDependencies:
-    next: ^11.1 || ^12 || ^13
-    react: ^16.8 || ^17 || ^18
-    react-dom: ^16.8 || ^17 || ^18
-  checksum: 5486d132c953f14c513e52a97c0160327abf0675ea6bfcd03332f74b0014f12eddb8ea96c99ea77cd45641fad8e7120c0db39a4f7beddc7c1ca21a1f5c7eb3c9
-  languageName: node
-  linkType: hard
-
 "@toss/utils@npm:^1.4.3":
   version: 1.4.3
   resolution: "@toss/utils@npm:1.4.3"
@@ -208,10 +197,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.3.1":
-  version: 20.3.1
-  resolution: "@types/node@npm:20.3.1"
-  checksum: 63a393ab6d947be17320817b35d7277ef03728e231558166ed07ee30b09fd7c08861be4d746f10fdc63ca7912e8cd023939d4eab887ff6580ff704ff24ed810c
+"@types/node@npm:^18":
+  version: 18.16.18
+  resolution: "@types/node@npm:18.16.18"
+  checksum: d32d8a0a04cd3f5ecb361bcb42f3a07623881ac90d680e06bf626defb3c663a94860d11690babe607cfe67265eceeb8a59ba5fe40c0e49f5a1b01e0088640469
   languageName: node
   linkType: hard
 
@@ -738,13 +727,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "guzzi-front@workspace:."
   dependencies:
-    "@toss/use-query-param": ^1.1.7
     "@toss/utils": ^1.4.3
-    "@types/node": 20.3.1
+    "@types/node": ^18
     "@types/react": 18.2.12
     "@types/react-dom": 18.2.5
     axios: ^1.4.0
     eslint: 8.43.0
+    husky: ^8.0.3
     next: ^13.2.3
     react: 18.2.0
     react-dom: 18.2.0
@@ -757,6 +746,15 @@ __metadata:
   version: 4.0.0
   resolution: "has-flag@npm:4.0.0"
   checksum: 261a1357037ead75e338156b1f9452c016a37dcd3283a972a30d9e4a87441ba372c8b81f818cd0fbcd9c0354b4ae7e18b9e1afa1971164aef6d18c2b6095a8ad
+  languageName: node
+  linkType: hard
+
+"husky@npm:^8.0.3":
+  version: 8.0.3
+  resolution: "husky@npm:8.0.3"
+  bin:
+    husky: lib/bin.js
+  checksum: 837bc7e4413e58c1f2946d38fb050f5d7324c6f16b0fd66411ffce5703b294bd21429e8ba58711cd331951ee86ed529c5be4f76805959ff668a337dbfa82a1b0
   languageName: node
   linkType: hard
 
