@@ -13,7 +13,7 @@ jobs:
       cancel-in-progress: true
     steps:
       - name: 이전 작업 취소
-        uses: rokroskar/workflow-run-cleanup-action@0.5.0
+        uses: rokroskar/workflow-run-cleanup-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.MOAIKANG_BOT_TOKEN }}
       - name: Checkout a repository
