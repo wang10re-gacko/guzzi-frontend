@@ -7,7 +7,6 @@ on:
 jobs:
   typescript-ci:
     name: 타입체크, ts-prune
-    runs-on: [self-hosted, live]
     concurrency:
       group: ${{ github.ref }}-typescript-ci
       cancel-in-progress: true
