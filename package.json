@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@toss/use-query-param": "^1.1.7",
+    "@toss/utils": "^1.4.3",
     "axios": "^1.4.0",
     "next": "13.4.6",
     "react": "18.2.0",

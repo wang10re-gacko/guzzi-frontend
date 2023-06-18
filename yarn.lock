@@ -5,7 +5,7 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@babel/runtime@npm:^7.20.7":
+"@babel/runtime@npm:^7.14.8, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.21.0":
   version: 7.22.5
   resolution: "@babel/runtime@npm:7.22.5"
   dependencies:
@@ -214,6 +214,27 @@ __metadata:
   dependencies:
     tslib: ^2.4.0
   checksum: 71e0e27234590435e4c62b97ef5e796f88e786841a38c7116a5e27a3eafa7b9ead7cdec5249b32165902076de78446945311c973e59bddf77c1e24f33a8f272a
+  languageName: node
+  linkType: hard
+
+"@toss/use-query-param@npm:^1.1.7":
+  version: 1.1.7
+  resolution: "@toss/use-query-param@npm:1.1.7"
+  peerDependencies:
+    next: ^11.1 || ^12 || ^13
+    react: ^16.8 || ^17 || ^18
+    react-dom: ^16.8 || ^17 || ^18
+  checksum: 5486d132c953f14c513e52a97c0160327abf0675ea6bfcd03332f74b0014f12eddb8ea96c99ea77cd45641fad8e7120c0db39a4f7beddc7c1ca21a1f5c7eb3c9
+  languageName: node
+  linkType: hard
+
+"@toss/utils@npm:^1.4.3":
+  version: 1.4.3
+  resolution: "@toss/utils@npm:1.4.3"
+  dependencies:
+    "@babel/runtime": ^7.14.8
+    date-fns: ^2.25.0
+  checksum: f437222e8f555dc63b411fbbd9ddc2b90c9ffed00bc4f48daa9388fb681f98f9af1a980a3e75f2f3d1d5417d367e2b840a3397f1e3772b02de199b21097c1f92
   languageName: node
   linkType: hard
 
@@ -659,6 +680,15 @@ __metadata:
   version: 1.0.8
   resolution: "damerau-levenshtein@npm:1.0.8"
   checksum: d240b7757544460ae0586a341a53110ab0a61126570ef2d8c731e3eab3f0cb6e488e2609e6a69b46727635de49be20b071688698744417ff1b6c1d7ccd03e0de
+  languageName: node
+  linkType: hard
+
+"date-fns@npm:^2.25.0":
+  version: 2.30.0
+  resolution: "date-fns@npm:2.30.0"
+  dependencies:
+    "@babel/runtime": ^7.21.0
+  checksum: f7be01523282e9bb06c0cd2693d34f245247a29098527d4420628966a2d9aad154bd0e90a6b1cf66d37adcb769cd108cf8a7bd49d76db0fb119af5cdd13644f4
   languageName: node
   linkType: hard
 
@@ -1474,6 +1504,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "guzzi-front@workspace:."
   dependencies:
+    "@toss/use-query-param": ^1.1.7
+    "@toss/utils": ^1.4.3
     "@types/node": 20.3.1
     "@types/react": 18.2.12
     "@types/react-dom": 18.2.5
