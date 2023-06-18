@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "src",
     "target": "es5",
-    "types": ["node"],
+    "types": ["node", "@emotion/react/types/css-prop"],
     "lib": ["dom", "dom.iterable", "esnext"],
     "strictNullChecks": true,
     "allowJs": false,

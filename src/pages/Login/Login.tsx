@@ -9,7 +9,7 @@ export default function Login() {
 
   return (
     <>
-      <label>
+      <label css={{ margin: '100px' }}>
         아이디
         <input></input>
       </label>
