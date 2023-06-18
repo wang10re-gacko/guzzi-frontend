@@ -1,0 +1,4 @@
+{
+  "error": true,
+  "ignore": "(^pages|^src/__mocks__|^middleware.ts)"
+}

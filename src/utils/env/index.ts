@@ -4,14 +4,17 @@ export const getEnv = () => {
   return process.env.NODE_ENV;
 };
 
+// ts-prune-ignore-next
 export const isDevelopmentEnv = () => {
   return getEnv() === 'development';
 };
 
+// ts-prune-ignore-next
 export const isProductionEnv = () => {
   return getEnv() === 'production';
 };
 
+// ts-prune-ignore-next
 export const isTestEnv = () => {
   return getEnv() === 'test';
 };
