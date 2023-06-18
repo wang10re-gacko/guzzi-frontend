@@ -12,4 +12,5 @@ const axiosInstance: HttpClient = axios.create({
 withSuccessHandler(axiosInstance);
 withErrorHandler(axiosInstance);
 
+// ts-prune-ignore-next
 export const http = axiosInstance;

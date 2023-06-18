@@ -1,0 +1,32 @@
+name: CI
+on:
+  push:
+    branches-ignore:
+      - "main"
+
+jobs:
+  typescript-ci:
+    name: 타입체크, ts-prune
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.ref }}-typescript-ci
+      cancel-in-progress: true
+    steps:
+      - name: 이전 작업 취소
+        uses: rokroskar/workflow-run-cleanup-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.MOAIKANG_BOT_TOKEN }}
+      - name: Checkout a repository
+        uses: actions/checkout@v3
+      - name: Node.js 설치
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+      - name: Yarn 설치
+        run: npm install --global yarn
+      - name: Install packages
+        run: yarn install --immutable --immutable-cache
+      - name: Typecheck
+        run: yarn run typecheck
+      - name: Find dead code
+        run: yarn find-deadcode
