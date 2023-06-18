@@ -1,5 +1,5 @@
-import { useQueryParam } from '@toss/use-query-param';
 import { Route } from 'constants/Route';
+import { useQueryParam } from 'hooks/useQueryParam';
 import { useRouter } from 'next/router';
 import { withBaseURL } from 'utils/env';
 
