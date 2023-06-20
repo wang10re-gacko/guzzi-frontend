@@ -4,8 +4,8 @@ import { ReactElement, ReactNode, useState } from 'react';
 import Head from 'next/head';
 import GlobalStyle from './components/GlobalStyle';
 import Layout from './components/Layout';
-import { DehydratedState, Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import UIProvider from './components/UIProvider';
+import ReactQueryProvider from './components/ReactQueryProvider';
 
 type Props = AppProps & {
   Component: NextComponentType & {
@@ -14,29 +14,14 @@ type Props = AppProps & {
 };
 
 export default function App({ Component, pageProps }: Props) {
-  const [queryClient] = useState(
-    () =>
-      new QueryClient({
-        defaultOptions: {
-          queries: {
-            retry: false,
-            refetchOnWindowFocus: false,
-          },
-        },
-      }),
-  );
-  const dehydratedState: DehydratedState = pageProps.dehydratedState;
-
   const getLayout = Component.getLayout ?? ((page: ReactElement) => <Layout>{page}</Layout>);
 
   return (
     <>
       <Header />
-      <QueryClientProvider client={queryClient}>
-        <Hydrate state={dehydratedState}>
-          <UIProvider>{getLayout(<Component {...pageProps} />)}</UIProvider>
-        </Hydrate>
-      </QueryClientProvider>
+      <ReactQueryProvider dehydratedState={pageProps.dehydratedState}>
+        <UIProvider>{getLayout(<Component {...pageProps} />)}</UIProvider>
+      </ReactQueryProvider>
     </>
   );
 }
