@@ -15,9 +15,7 @@ const globalCss = css`
     font-size: 16px;
     max-width: 820px;
     margin: 0 auto;
-    font-family: Pretendard, -apple-system, BlinkMacSystemFont, Bazier Square, Noto Sans KR, Segoe UI,
-      Apple SD Gothic Neo, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
-      Noto Color Emoji;
+    font-family: 'Pretendard', sans-serif;
   }
 
   a {
