@@ -4,8 +4,8 @@ import { ReactElement, ReactNode, useState } from 'react';
 import Head from 'next/head';
 import GlobalStyle from './components/GlobalStyle';
 import Layout from './components/Layout';
-import { OverlayProvider } from '@toss/use-overlay';
 import { DehydratedState, Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import UIProvider from './components/UIProvider';
 
 type Props = AppProps & {
   Component: NextComponentType & {
@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }: Props) {
       <Header />
       <QueryClientProvider client={queryClient}>
         <Hydrate state={dehydratedState}>
-          <OverlayProvider>{getLayout(<Component {...pageProps} />)}</OverlayProvider>
+          <UIProvider>{getLayout(<Component {...pageProps} />)}</UIProvider>
         </Hydrate>
       </QueryClientProvider>
     </>
