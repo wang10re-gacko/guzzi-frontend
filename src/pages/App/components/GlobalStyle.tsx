@@ -1,4 +1,5 @@
 import { css, Global } from '@emotion/react';
+import { colors } from 'constants/colors';
 
 export default function GlobalStyle() {
   return <Global styles={globalCss} />;
@@ -16,6 +17,8 @@ const globalCss = css`
     max-width: 820px;
     margin: 0 auto;
     font-family: 'Pretendard', sans-serif;
+    background-color: ${colors.grey500};
+    color: ${colors.white};
   }
 
   a {
