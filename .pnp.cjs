@@ -33,6 +33,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:11.11.1"],\
             ["@emotion/styled", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:11.11.0"],\
             ["@tanstack/react-query", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:4.29.14"],\
+            ["@toss/emotion-utils", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.1.9"],\
+            ["@toss/react", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.4.0"],\
             ["@toss/use-overlay", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.3.5"],\
             ["@toss/utils", "npm:1.4.3"],\
             ["@types/node", "npm:18.16.18"],\
@@ -2956,6 +2958,77 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@toss/emotion-utils", [\
+        ["npm:1.1.9", {\
+          "packageLocation": "./.yarn/cache/@toss-emotion-utils-npm-1.1.9-82652d98a7-4a127171c1.zip/node_modules/@toss/emotion-utils/",\
+          "packageDependencies": [\
+            ["@toss/emotion-utils", "npm:1.1.9"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.1.9", {\
+          "packageLocation": "./.yarn/__virtual__/@toss-emotion-utils-virtual-abce5a3d24/0/cache/@toss-emotion-utils-npm-1.1.9-82652d98a7-4a127171c1.zip/node_modules/@toss/emotion-utils/",\
+          "packageDependencies": [\
+            ["@toss/emotion-utils", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.1.9"],\
+            ["@babel/runtime", "npm:7.22.5"],\
+            ["@emotion/react", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:11.11.1"],\
+            ["@toss/utils", "npm:1.4.3"],\
+            ["@types/emotion__react", null],\
+            ["@types/react", "npm:18.2.12"],\
+            ["@types/react-dom", "npm:18.2.5"],\
+            ["csstype", "npm:3.1.2"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@emotion/react",\
+            "@types/emotion__react",\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@toss/react", [\
+        ["npm:1.4.0", {\
+          "packageLocation": "./.yarn/cache/@toss-react-npm-1.4.0-93689946e2-21b07d8325.zip/node_modules/@toss/react/",\
+          "packageDependencies": [\
+            ["@toss/react", "npm:1.4.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.4.0", {\
+          "packageLocation": "./.yarn/__virtual__/@toss-react-virtual-2dd47e37e9/0/cache/@toss-react-npm-1.4.0-93689946e2-21b07d8325.zip/node_modules/@toss/react/",\
+          "packageDependencies": [\
+            ["@toss/react", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.4.0"],\
+            ["@babel/runtime", "npm:7.22.5"],\
+            ["@toss/storage", "npm:1.3.0"],\
+            ["@toss/utils", "npm:1.4.3"],\
+            ["@types/react", "npm:18.2.12"],\
+            ["classnames", "npm:2.3.2"],\
+            ["lodash.debounce", "npm:4.0.8"],\
+            ["lodash.throttle", "npm:4.1.1"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@toss/storage", [\
+        ["npm:1.3.0", {\
+          "packageLocation": "./.yarn/cache/@toss-storage-npm-1.3.0-8ccdab78a0-bc82d32df7.zip/node_modules/@toss/storage/",\
+          "packageDependencies": [\
+            ["@toss/storage", "npm:1.3.0"],\
+            ["@babel/runtime", "npm:7.22.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@toss/use-overlay", [\
         ["npm:1.3.5", {\
           "packageLocation": "./.yarn/cache/@toss-use-overlay-npm-1.3.5-43124b429b-38f52ddaba.zip/node_modules/@toss/use-overlay/",\
@@ -3295,6 +3368,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chalk", "npm:4.1.2"],\
             ["ansi-styles", "npm:4.3.0"],\
             ["supports-color", "npm:7.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["classnames", [\
+        ["npm:2.3.2", {\
+          "packageLocation": "./.yarn/cache/classnames-npm-2.3.2-d2fdae468d-2c62199789.zip/node_modules/classnames/",\
+          "packageDependencies": [\
+            ["classnames", "npm:2.3.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3975,6 +4057,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:11.11.1"],\
             ["@emotion/styled", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:11.11.0"],\
             ["@tanstack/react-query", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:4.29.14"],\
+            ["@toss/emotion-utils", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.1.9"],\
+            ["@toss/react", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.4.0"],\
             ["@toss/use-overlay", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.3.5"],\
             ["@toss/utils", "npm:1.4.3"],\
             ["@types/node", "npm:18.16.18"],\
@@ -4257,6 +4341,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["lodash.debounce", [\
+        ["npm:4.0.8", {\
+          "packageLocation": "./.yarn/cache/lodash.debounce-npm-4.0.8-f1d6e09799-a3f527d22c.zip/node_modules/lodash.debounce/",\
+          "packageDependencies": [\
+            ["lodash.debounce", "npm:4.0.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["lodash.merge", [\
         ["npm:4.6.2", {\
           "packageLocation": "./.yarn/cache/lodash.merge-npm-4.6.2-77cb4416bf-ad580b4bdb.zip/node_modules/lodash.merge/",\
@@ -4271,6 +4364,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/lodash.mergewith-npm-4.6.2-7d2d4201ec-a6db2a9339.zip/node_modules/lodash.mergewith/",\
           "packageDependencies": [\
             ["lodash.mergewith", "npm:4.6.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lodash.throttle", [\
+        ["npm:4.1.1", {\
+          "packageLocation": "./.yarn/cache/lodash.throttle-npm-4.1.1-856641af92-129c0a28ce.zip/node_modules/lodash.throttle/",\
+          "packageDependencies": [\
+            ["lodash.throttle", "npm:4.1.1"]\
           ],\
           "linkType": "HARD"\
         }]\

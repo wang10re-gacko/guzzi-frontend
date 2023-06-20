@@ -1,12 +1,18 @@
 import { Button } from '@chakra-ui/react';
+import { Spacing } from '@toss/emotion-utils';
+import BottomSheet from 'components/BottomSheet';
+import Heading from 'components/Heading';
+import Txt from 'components/Txt';
 
 export default function Home() {
   return (
     <>
-      <div>Home</div>
-      <div>Home</div>
-      <div>나는 홈이란다</div>
-      <Button>안녕</Button>
+      <Heading>거지방</Heading>
+      <BottomSheet>
+        <Txt size="big">안녕</Txt>
+        <Spacing size={24} />
+        <Button>잘가</Button>
+      </BottomSheet>
     </>
   );
 }
