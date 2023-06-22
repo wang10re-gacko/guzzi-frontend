@@ -2,7 +2,6 @@ import { Spacing } from '@toss/emotion-utils';
 import BottomSheet from 'components/BottomSheet';
 import Button from 'components/Button';
 import Heading from 'components/Heading';
-import Input from 'components/Input';
 import Txt from 'components/Txt';
 import useToaster from 'hooks/useToaster';
 
