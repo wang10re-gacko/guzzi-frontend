@@ -14,10 +14,7 @@ export default function Home() {
       <BottomSheet>
         <Txt size="big">안녕</Txt>
         <Spacing size={24} />
-        <Input />
-        <Button onClick={() => successToast('잘가요~')} isLoading={true}>
-          잘가
-        </Button>
+        <Button onClick={() => successToast('잘가요~')}>잘가</Button>
       </BottomSheet>
     </>
   );
