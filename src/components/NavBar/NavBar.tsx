@@ -1,5 +1,4 @@
 import { Flex } from '@toss/emotion-utils';
-import Txt from 'components/Txt/Txt';
 import { colors } from 'constants/colors';
 
 function NavBar() {

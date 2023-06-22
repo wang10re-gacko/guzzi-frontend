@@ -25,23 +25,20 @@ const StyledTxt = styled.span<Props>`
       .with('big', () => '20px')
       .with('extra-big', () => '28px')
       .otherwise(() => '14px')};
-  font-weight: ${props => {
-    return (
-      props.weight ??
-      match(props.size)
-        .with('small', () => 'normal')
-        .with('medium', () => 'normal')
-        .with('semi-big', () => 'bold')
-        .with('big', () => 'bold')
-        .with('extra-big', () => 'bold')
-        .otherwise(() => 'normal')
-    );
-  }};
+  font-weight: ${props =>
+    props.weight ??
+    match(props.size)
+      .with('small', () => 'normal')
+      .with('medium', () => 'normal')
+      .with('semi-big', () => 'bold')
+      .with('big', () => 'bold')
+      .with('extra-big', () => 'bold')
+      .otherwise(() => 'normal')};
   color: ${props => colors[props.colors!]};
   text-align: ${props => props.textAlign};
   line-height: ${props =>
     match(props.size)
-      .with('small', () => '142x')
+      .with('small', () => '12px')
       .with('medium', () => '14px')
       .with('semi-big', () => '16px')
       .with('big', () => '20px')

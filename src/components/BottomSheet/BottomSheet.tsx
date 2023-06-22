@@ -14,9 +14,13 @@ export default function BottomSheet({ children, takeSpace = true, ...props }: Pr
   const [bottomSheetHeight, setBottomSheetHeight] = useState(0);
 
   const ref = useResizeObserver<HTMLDivElement>(entry => {
+    if (!takeSpace) {
+      return;
+    }
+
     const { height, y } = entry.contentRect;
-    const bottomSheetHeight = height + 2 * y;
-    setBottomSheetHeight(bottomSheetHeight);
+    const bottomSheetBoundingRectHeight = height + 2 * y;
+    setBottomSheetHeight(bottomSheetBoundingRectHeight);
   });
 
   return (
@@ -26,7 +30,7 @@ export default function BottomSheet({ children, takeSpace = true, ...props }: Pr
           {children}
         </Container>
       </Portal>
-      <Spacing size={bottomSheetHeight} />
+      {takeSpace ? <Spacing size={bottomSheetHeight} /> : null}
     </>
   );
 }
@@ -39,6 +43,5 @@ const Container = styled(Flex)`
   max-width: 820px;
   padding: 24px 16px;
   border-radius: 16px 16px 0px 0px;
-  max-height: 370px;
   background-color: ${colors.grey400};
 `;
