@@ -5,6 +5,8 @@ import { colors } from 'constants/colors';
 import { Portal } from '@chakra-ui/react';
 import { useResizeObserver } from '@toss/react';
 
+const BOTTOM_SHEET_ANTI_INTERSECTING_SPARE_SPACE = 12;
+
 interface Props extends ComponentProps<typeof Flex> {
   children?: ReactNode;
   takeSpace?: boolean;
@@ -20,7 +22,8 @@ export default function BottomSheet({ children, takeSpace = true, ...props }: Pr
 
     const { height, y } = entry.contentRect;
     const bottomSheetBoundingRectHeight = height + 2 * y;
-    setBottomSheetHeight(bottomSheetBoundingRectHeight);
+
+    setBottomSheetHeight(bottomSheetBoundingRectHeight + BOTTOM_SHEET_ANTI_INTERSECTING_SPARE_SPACE);
   });
 
   return (
@@ -43,5 +46,6 @@ const Container = styled(Flex)`
   max-width: 820px;
   padding: 24px 16px;
   border-radius: 16px 16px 0px 0px;
-  background-color: ${colors.grey400};
+  background-color: ${colors.grey500};
+  z-index: 100;
 `;

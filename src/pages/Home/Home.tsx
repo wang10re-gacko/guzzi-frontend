@@ -2,9 +2,9 @@ import { Spacing } from '@toss/emotion-utils';
 import BottomSheet from 'components/BottomSheet';
 import Button from 'components/Button';
 import Heading from 'components/Heading';
-import Txt from 'components/Txt';
 import useToaster from 'hooks/useToaster';
 import useConfirm from 'hooks/useConfirm';
+import Input from 'components/Input';
 
 export default function Home() {
   const { successToast, errorToast } = useToaster();
@@ -12,11 +12,22 @@ export default function Home() {
 
   return (
     <>
-      <Heading>거지방</Heading>
+      <Spacing size={12} />
+      <img src="https://static.toss.im/3d-emojis/u1F4B8-apng.png" alt="" draggable={false} width="80px" />
+      <Heading>나, 돈 써도 돼요?</Heading>
+
+      <Input placeholder="질문을 입력해주세요" />
+
+      <Spacing size={40} />
+      <Button onClick={() => successToast('잘가요~')}>토스트 테스트</Button>
+      <Spacing size={20} />
+      <Button onClick={() => successToast('잘가요~')} isLoading={true}>
+        로딩 UI
+      </Button>
+
       <BottomSheet>
-        <Txt size="big">안녕</Txt>
-        <Spacing size={24} />
         <Button
+          type="primary"
           onClick={async () => {
             const isConfirmed = await openConfirm({
               title: '진짜 인정합니까?',
@@ -30,10 +41,10 @@ export default function Home() {
             }
           }}
         >
-          인정합니까?
+          컨펌 테스트
         </Button>
         <Spacing size={12} />
-        <Button onClick={() => successToast('잘가요~')}>잘가</Button>
+        <Button onClick={() => successToast('잘가요~')}>토스트 테스트</Button>
       </BottomSheet>
     </>
   );
