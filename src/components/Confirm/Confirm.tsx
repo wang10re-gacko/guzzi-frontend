@@ -6,6 +6,7 @@ import {
   AlertDialogHeader,
   Button,
 } from '@chakra-ui/react';
+import { css } from '@emotion/react';
 import { margin } from '@toss/emotion-utils';
 import { colors } from 'constants/colors';
 import React, { ReactNode, useRef } from 'react';
@@ -42,7 +43,16 @@ export default function Confirm({
       closeOnEsc={true}
       portalProps={{}}
     >
-      <AlertDialogContent backgroundColor={colors.grey400} color={colors.white} css={margin.x16}>
+      <AlertDialogContent
+        backgroundColor={colors.grey400}
+        color={colors.white}
+        css={[
+          margin.x16,
+          css`
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+          `,
+        ]}
+      >
         <AlertDialogHeader fontSize="lg" fontWeight="bold">
           {title}
         </AlertDialogHeader>

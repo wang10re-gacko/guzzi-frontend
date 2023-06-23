@@ -23,7 +23,7 @@ const StyledTxt = styled.span<Props>`
       .with('medium', () => '14px')
       .with('semi-big', () => '16px')
       .with('big', () => '20px')
-      .with('extra-big', () => '28px')
+      .with('extra-big', () => '24px')
       .otherwise(() => '14px')};
   font-weight: ${props =>
     props.weight ??
@@ -42,6 +42,6 @@ const StyledTxt = styled.span<Props>`
       .with('medium', () => '14px')
       .with('semi-big', () => '16px')
       .with('big', () => '20px')
-      .with('extra-big', () => '28px')
+      .with('extra-big', () => '24px')
       .otherwise(() => '14px')};
 `;

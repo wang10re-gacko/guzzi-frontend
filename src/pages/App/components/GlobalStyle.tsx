@@ -6,6 +6,12 @@ export default function GlobalStyle() {
 }
 
 const globalCss = css`
+  * {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+
   body,
   html,
   #__next {
@@ -17,8 +23,9 @@ const globalCss = css`
     max-width: 820px;
     margin: 0 auto;
     font-family: 'Pretendard', sans-serif;
-    background-color: ${colors.grey500};
+    background-color: ${colors.background};
     color: ${colors.white};
+    min-height: 100dvh;
   }
 
   a {
