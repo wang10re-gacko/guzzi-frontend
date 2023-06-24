@@ -5,10 +5,13 @@ import Heading from 'components/Heading';
 import useToaster from 'hooks/useToaster';
 import useConfirm from 'hooks/useConfirm';
 import Input from 'components/Input';
+import { Lottie } from '@toss/lottie';
+import usePartyPopper from 'hooks/usePartyPopper';
 
 export default function Home() {
   const { successToast, errorToast } = useToaster();
   const { openConfirm } = useConfirm();
+  const { play: playPartyPopper } = usePartyPopper();
 
   return (
     <>
@@ -23,6 +26,10 @@ export default function Home() {
       <Spacing size={20} />
       <Button onClick={() => successToast('잘가요~')} isLoading={true}>
         로딩 UI
+      </Button>
+      <Spacing size={20} />
+      <Button type="primary" onClick={() => playPartyPopper()}>
+        폭죽 실행
       </Button>
 
       <BottomSheet>

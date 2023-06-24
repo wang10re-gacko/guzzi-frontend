@@ -34,6 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/styled", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:11.11.0"],\
             ["@tanstack/react-query", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:4.29.14"],\
             ["@toss/emotion-utils", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.1.9"],\
+            ["@toss/lottie", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.1.9"],\
             ["@toss/react", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.4.0"],\
             ["@toss/use-overlay", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.3.5"],\
             ["@toss/utils", "npm:1.4.3"],\
@@ -2991,6 +2992,62 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@toss/impression-area", [\
+        ["npm:1.2.9", {\
+          "packageLocation": "./.yarn/cache/@toss-impression-area-npm-1.2.9-302bc22167-b9d92e5917.zip/node_modules/@toss/impression-area/",\
+          "packageDependencies": [\
+            ["@toss/impression-area", "npm:1.2.9"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:c33e4090696fcc30be200b61a57637caddf1ae3cf3bedba031cc4dab8bd0e60a6b580e10709abd8199ba04c9c6714888c155a5850fc075ad42c9a9861c8aeec6#npm:1.2.9", {\
+          "packageLocation": "./.yarn/__virtual__/@toss-impression-area-virtual-2a354caca0/0/cache/@toss-impression-area-npm-1.2.9-302bc22167-b9d92e5917.zip/node_modules/@toss/impression-area/",\
+          "packageDependencies": [\
+            ["@toss/impression-area", "virtual:c33e4090696fcc30be200b61a57637caddf1ae3cf3bedba031cc4dab8bd0e60a6b580e10709abd8199ba04c9c6714888c155a5850fc075ad42c9a9861c8aeec6#npm:1.2.9"],\
+            ["@toss/react", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.4.0"],\
+            ["@toss/utils", "npm:1.4.3"],\
+            ["@types/react", "npm:18.2.12"],\
+            ["lodash.debounce", "npm:4.0.8"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@toss/lottie", [\
+        ["npm:1.1.9", {\
+          "packageLocation": "./.yarn/cache/@toss-lottie-npm-1.1.9-9d54ec8a3e-0fcf49a99b.zip/node_modules/@toss/lottie/",\
+          "packageDependencies": [\
+            ["@toss/lottie", "npm:1.1.9"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.1.9", {\
+          "packageLocation": "./.yarn/__virtual__/@toss-lottie-virtual-c33e409069/0/cache/@toss-lottie-npm-1.1.9-9d54ec8a3e-0fcf49a99b.zip/node_modules/@toss/lottie/",\
+          "packageDependencies": [\
+            ["@toss/lottie", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.1.9"],\
+            ["@toss/impression-area", "virtual:c33e4090696fcc30be200b61a57637caddf1ae3cf3bedba031cc4dab8bd0e60a6b580e10709abd8199ba04c9c6714888c155a5850fc075ad42c9a9861c8aeec6#npm:1.2.9"],\
+            ["@toss/react", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.4.0"],\
+            ["@toss/utils", "npm:1.4.3"],\
+            ["@types/react", "npm:18.2.12"],\
+            ["@types/react-dom", "npm:18.2.5"],\
+            ["lodash.debounce", "npm:4.0.8"],\
+            ["lottie-web", "npm:5.12.2"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@toss/react", [\
         ["npm:1.4.0", {\
           "packageLocation": "./.yarn/cache/@toss-react-npm-1.4.0-93689946e2-21b07d8325.zip/node_modules/@toss/react/",\
@@ -4058,6 +4115,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/styled", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:11.11.0"],\
             ["@tanstack/react-query", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:4.29.14"],\
             ["@toss/emotion-utils", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.1.9"],\
+            ["@toss/lottie", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.1.9"],\
             ["@toss/react", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.4.0"],\
             ["@toss/use-overlay", "virtual:0974419b1d547966a136a62ebca292c79a309e1ca1f5267bf3df5a3a274f8c1fc8c87b1b665dd353854e49acf22447886bea1f838ed774b50917ee1d25525037#npm:1.3.5"],\
             ["@toss/utils", "npm:1.4.3"],\
@@ -4383,6 +4441,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["loose-envify", "npm:1.4.0"],\
             ["js-tokens", "npm:4.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lottie-web", [\
+        ["npm:5.12.2", {\
+          "packageLocation": "./.yarn/cache/lottie-web-npm-5.12.2-942dc9e22a-af5bc3bc40.zip/node_modules/lottie-web/",\
+          "packageDependencies": [\
+            ["lottie-web", "npm:5.12.2"]\
           ],\
           "linkType": "HARD"\
         }]\
