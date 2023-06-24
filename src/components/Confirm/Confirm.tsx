@@ -4,10 +4,10 @@ import {
   AlertDialogContent,
   AlertDialogFooter,
   AlertDialogHeader,
-  Button,
 } from '@chakra-ui/react';
 import { css } from '@emotion/react';
 import { margin } from '@toss/emotion-utils';
+import Button from 'components/Button';
 import { colors } from 'constants/colors';
 import React, { ReactNode, useRef } from 'react';
 

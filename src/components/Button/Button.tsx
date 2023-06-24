@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, ComponentProps } from 'react';
+import { ButtonHTMLAttributes, ComponentProps, forwardRef } from 'react';
 import { Button as ChakraButton } from '@chakra-ui/react';
 import { match } from 'ts-pattern';
 import { colors } from 'constants/colors';
@@ -9,7 +9,7 @@ type Props = Omit<ComponentProps<typeof ChakraButton>, 'type'> & {
   type?: 'primary' | 'default';
 };
 
-export default function Button({ children, htmlType, type = 'default', ...props }: Props) {
+const Button = forwardRef(function Button({ children, htmlType, type = 'default', ...props }: Props, forwardedRef) {
   return (
     <ChakraButton
       {...props}
@@ -31,11 +31,14 @@ export default function Button({ children, htmlType, type = 'default', ...props 
             .exhaustive()};
         }
       `}
+      ref={forwardedRef}
     >
       {children}
     </ChakraButton>
   );
-}
+});
+
+export default Button;
 
 const brighten = (color: string) => {
   return `${color}90`;
