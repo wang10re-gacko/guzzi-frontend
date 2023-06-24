@@ -1,12 +1,10 @@
-import { ComponentProps } from 'react';
+import { ComponentProps, forwardRef } from 'react';
 import { Input as ChakraInput } from '@chakra-ui/react';
 import { colors } from 'constants/colors';
-import { css } from '@emotion/react';
 
 type Props = ComponentProps<typeof ChakraInput>;
 
-// ts-prune-ignore-next
-export default function Input(props: Props) {
+const Input = forwardRef(function Input(props: Props, forwardedRef) {
   return (
     <ChakraInput
       {...props}
@@ -16,6 +14,9 @@ export default function Input(props: Props) {
       variant="flushed"
       spellCheck={false}
       _placeholder={{ opacity: 1, color: colors.grey200 }}
+      ref={forwardedRef}
     />
   );
-}
+});
+
+export default Input;
