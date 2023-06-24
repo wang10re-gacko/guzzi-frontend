@@ -18,12 +18,6 @@ export default function Home() {
       <Spacing size={12} />
       <img src="https://static.toss.im/3d-emojis/u1F4B8-apng.png" alt="" draggable={false} width="80px" />
       <Heading>나, 돈 써도 돼요?</Heading>
-      <Lottie
-        src="https://static.toss.im/lotties-common/confetti-full-hero.json"
-        css={{ display: 'none', position: 'fixed', top: 0, left: '50%', transform: 'translateX(-50%)', zIndex: 200 }}
-        alt=""
-        loop={true}
-      />
 
       <Input placeholder="질문을 입력해주세요" />
 
