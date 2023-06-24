@@ -2,6 +2,7 @@ import { HTMLAttributes } from 'react';
 import { Spacing } from '@toss/emotion-utils';
 import { Route } from 'constants/Route';
 import { useRouter } from 'next/router';
+import { colors } from 'constants/colors';
 import BottomSheet from 'components/BottomSheet';
 import Button from 'components/Button';
 import Heading from 'components/Heading';
@@ -64,10 +65,10 @@ export default function Home() {
 
       <BottomSheet>
         <Button
-          type="primary"
           onClick={async () => {
             router.push(Route.WRITING());
           }}
+          css={{ width: '100%', height: '48px', background: `${colors.grey400}` }}
         >
           컨펌 테스트
         </Button>

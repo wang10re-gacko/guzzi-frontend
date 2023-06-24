@@ -6,5 +6,6 @@ export const colors = {
   grey500: '#1E1E1E',
   background: '#1E1E1E',
   white: '#FFFFFF',
+  blue: '#00AAFF',
   orange: '#EF4B33',
 } as const;

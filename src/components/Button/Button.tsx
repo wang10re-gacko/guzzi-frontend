@@ -16,7 +16,7 @@ const Button = forwardRef(function Button({ children, htmlType, type = 'default'
       loadingText={children}
       type={htmlType}
       backgroundColor={match(type)
-        .with('primary', () => colors.orange)
+        .with('primary', () => colors.blue)
         .with('default', () => colors.grey300)
         .exhaustive()}
       color={match(type)
@@ -26,7 +26,7 @@ const Button = forwardRef(function Button({ children, htmlType, type = 'default'
       css={css`
         &:hover {
           background-color: ${match(type)
-            .with('primary', () => brighten(colors.orange))
+            .with('primary', () => brighten(colors.blue))
             .with('default', () => brighten(colors.grey100))
             .exhaustive()};
         }

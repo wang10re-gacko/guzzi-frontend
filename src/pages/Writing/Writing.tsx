@@ -18,7 +18,7 @@ export default function Writing() {
       <Input placeholder="질문을 입력해주세요" />
       <Spacing size={32} />
 
-      <Txt size="medium" colors="orange">
+      <Txt size="medium" colors="blue">
         이렇게 답변해 줄 거에요.
       </Txt>
       <Spacing size={12} />
@@ -32,7 +32,7 @@ export default function Writing() {
           onClick={() => {
             router.push(Route.HOME());
           }}
-          css={{ width: '100%', height: '48px', background: `${colors.orange}` }}
+          css={{ width: '100%', height: '48px', background: `${colors.blue}` }}
         >
           올리기
         </Button>
