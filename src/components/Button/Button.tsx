@@ -16,7 +16,7 @@ export default function Button({ children, htmlType, type = 'default', ...props 
       loadingText={children}
       type={htmlType}
       backgroundColor={match(type)
-        .with('primary', () => colors.orange)
+        .with('primary', () => colors.blue)
         .with('default', () => colors.grey300)
         .exhaustive()}
       color={match(type)
@@ -26,7 +26,7 @@ export default function Button({ children, htmlType, type = 'default', ...props 
       css={css`
         &:hover {
           background-color: ${match(type)
-            .with('primary', () => brighten(colors.orange))
+            .with('primary', () => brighten(colors.blue))
             .with('default', () => brighten(colors.grey100))
             .exhaustive()};
         }
