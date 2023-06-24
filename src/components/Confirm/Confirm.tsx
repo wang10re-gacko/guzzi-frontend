@@ -58,10 +58,10 @@ export default function Confirm({
         </AlertDialogHeader>
         <AlertDialogBody>{description}</AlertDialogBody>
         <AlertDialogFooter>
-          <Button ref={cancelRef} bgColor={colors.grey100} onClick={onCancel}>
+          <Button ref={cancelRef} type="default" onClick={onCancel}>
             {cancelButtonText}
           </Button>
-          <Button backgroundColor={colors.orange} color={colors.white} ml={3} onClick={onConfirm}>
+          <Button type="primary" ml={3} onClick={onConfirm}>
             {confirmButtonText}
           </Button>
         </AlertDialogFooter>
