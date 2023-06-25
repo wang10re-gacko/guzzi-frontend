@@ -16,9 +16,12 @@ const Input = forwardRef(function Input({ type = 'default', ...props }: Props, f
       focusBorderColor={colors.orange}
       borderColor={colors.grey200}
       color={colors.white}
-      variant="flushed"
       spellCheck={false}
       _placeholder={{ opacity: 1, color: colors.grey200 }}
+      variant={match(type)
+        .with('primary', () => 'unstyled')
+        .with('default', () => 'flushed')
+        .exhaustive()}
       backgroundColor={match(type)
         .with('primary', () => colors.grey400)
         .with('default', () => 'transparent')
