@@ -1,9 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-branch=$(git branch --show-current)
-if [ "$branch" == "main" ] || [ "$branch" == "master" ]
-then
-  echo "main 또는 master 브랜치에는 커밋하지 마세요!"
-  exit 1;
-fi
