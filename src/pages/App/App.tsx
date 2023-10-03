@@ -7,6 +7,7 @@ import Layout from './components/Layout';
 import UIProvider from './components/UIProvider';
 import ReactQueryProvider from './components/ReactQueryProvider';
 import SSRSuspense from './components/SSRSuspense';
+import AuthErrorBoundary from './components/AuthErrorHandleErrorBoundary';
 
 type Props = AppProps & {
   Component: NextComponentType & {
@@ -22,7 +23,9 @@ export default function App({ Component, pageProps }: Props) {
       <Header />
       <ReactQueryProvider dehydratedState={pageProps.dehydratedState}>
         <SSRSuspense fallback={null}>
-          <UIProvider>{getLayout(<Component {...pageProps} />)}</UIProvider>
+          <AuthErrorBoundary>
+            <UIProvider>{getLayout(<Component {...pageProps} />)}</UIProvider>
+          </AuthErrorBoundary>
         </SSRSuspense>
       </ReactQueryProvider>
     </>
