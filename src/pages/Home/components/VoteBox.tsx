@@ -10,7 +10,9 @@ export default function VoteItem({
 }: {
   vote: Vote;
 }) {
-  const handleVoteButtonClick = useMutation(() => {});
+  const handleVoteButtonClick = useMutation(async () => {
+    return null;
+  });
 
   return (
     <>
