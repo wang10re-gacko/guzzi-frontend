@@ -16,7 +16,6 @@ export default function AuthErrorBoundary({ children }: { children: ReactNode })
       onError={() => {
         const currentLocation = window.location.pathname + window.location.search;
         window.location.href = withBaseURL(Route.LOGIN({ redirectUrl: currentLocation }));
-        return Promise.resolve(null);
       }}
     >
       {children}

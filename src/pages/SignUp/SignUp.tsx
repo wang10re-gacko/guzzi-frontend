@@ -6,13 +6,13 @@ import { useMutation } from 'react-query';
 import Button from 'components/Button/Button';
 import { useState } from 'react';
 import { Input } from '@chakra-ui/react';
-import { Flex, Spacing, width100 } from '@toss/emotion-utils';
+import { Spacing, width100 } from '@toss/emotion-utils';
 import { signIn } from 'remotes/login';
-import Txt from 'components/Txt/Txt';
+import { signUp } from 'remotes/signUp';
 import useToaster from 'hooks/useToaster';
 import { getErrorMessage } from 'utils/errors/getErrorMessage';
 
-export default function Login() {
+export default function SignUp() {
   const router = useRouter();
   const redirectUrl = useQueryParam('redirectUrl');
   const [id, setId] = useState('');
@@ -21,12 +21,13 @@ export default function Login() {
 
   const handleLoginButtonClick = useMutation(async () => {
     try {
+      await signUp({ id, password });
       await signIn({ id, password });
-      // if (redirectUrl == null) {
-      //   router.push(Route.HOME());
-      // } else {
-      //   router.push(withBaseURL(redirectUrl));
-      // }
+      if (redirectUrl == null) {
+        router.push(Route.HOME());
+      } else {
+        router.push(withBaseURL(redirectUrl));
+      }
     } catch (error) {
       errorToast(getErrorMessage(error));
     }
@@ -45,22 +46,13 @@ export default function Login() {
         <Input type="password" value={password} onChange={e => setPassword(e.target.value)} />
       </label>
       <Spacing size={20} />
-      <Flex css={width100} justify="center">
-        <Txt
-          css={{ textDecoration: 'underline', width: '100%', textAlign: 'center' }}
-          onClick={() => router.push(Route.SIGN_UP({ redirectUrl }))}
-        >
-          회원가입
-        </Txt>
-      </Flex>
-      <Spacing size={12} />
       <Button
         css={width100}
         disabled={id.length === 0 && password.length === 0}
         isLoading={handleLoginButtonClick.isLoading}
         onClick={() => handleLoginButtonClick.mutate()}
       >
-        로그인
+        회원가입
       </Button>
     </>
   );
