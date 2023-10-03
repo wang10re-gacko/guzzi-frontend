@@ -3,58 +3,52 @@ import { colors } from 'constants/colors';
 import Button from 'components/Button';
 import Txt from 'components/Txt';
 import { Vote } from 'models/vote';
+import { useMutation } from 'react-query';
 
-export default function VoteBox(props: Vote) {
+export default function VoteItem({
+  vote: { CONTENT, FIRST_ANSWER, SECOND_ANSWER, TOTAL_ANSWER_COUNT, CHK },
+}: {
+  vote: Vote;
+}) {
+  const handleVoteButtonClick = useMutation(() => {});
+
   return (
     <>
-      <Stack.Horizontal gutter={12} align="center" css={{ justifyContent: 'space-between' }}>
-        <Txt size="semi-big" colors="grey300">
-          {props.time}
-        </Txt>
-        {props.mine ? (
-          <Button onClick={() => {}} css={{ width: '40px', height: '40px' }}>
-            삭제
-          </Button>
-        ) : (
-          <Spacing size={40} />
-        )}
-      </Stack.Horizontal>
+      <Stack.Horizontal gutter={12} align="center" css={{ justifyContent: 'space-between' }}></Stack.Horizontal>
       <Spacing size={12} />
-
-      <Txt size="semi-big">{props.title}</Txt>
+      <Txt size="semi-big">{CONTENT}</Txt>
       <Spacing size={12} />
-
       <Button
-        // type={props.myClick === 0 ? 'primary' : 'default'}
-        isSelected={props.myClick === 0}
+        type={CHK === 'first' ? 'primary' : 'default'}
+        disabled={CHK === 'first'}
+        isLoading={handleVoteButtonClick.isLoading}
         onClick={() => {
           // api
         }}
         css={{ width: '100%' }}
       >
-        {props.question1}
+        {FIRST_ANSWER}
       </Button>
       <Spacing size={12} />
       <Button
-        // type={props.myClick === 1 ? 'primary' : 'default'}
-        isSelected={props.myClick === 1}
+        type={CHK === 'second' ? 'primary' : 'default'}
+        disabled={CHK === 'second'}
+        isLoading={handleVoteButtonClick.isLoading}
         onClick={() => {
           // api
         }}
         css={{ width: '100%' }}
       >
-        {props.question2}
+        {SECOND_ANSWER}
       </Button>
       <Spacing size={12} />
-
       <Txt size="semi-big" colors="grey200">
-        {props.clickCnt}명
+        {TOTAL_ANSWER_COUNT}명
       </Txt>
       <Txt size="semi-big" colors="grey300">
         이 눌렀어요
       </Txt>
       <Spacing size={12} />
-
       <Spacing size={20} />
       <Flex css={{ borderBottom: `1px solid ${colors.grey400}` }} />
       <Spacing size={32} />
